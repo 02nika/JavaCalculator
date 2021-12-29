@@ -28,11 +28,7 @@ public class CalculatorController {
 
         if(checkDoubleEqualFlag() && value.equals("="))
         {
-            mainField.setText("");
-            doubleEqualFlag = 0;
-            xValue = 0;
-            yValue = 0;
-            operator = "";
+            defaultValues();
             return;
         }
 
@@ -56,6 +52,14 @@ public class CalculatorController {
                 doubleEqualFlag++;
                 break;
         }
+    }
+
+    private void defaultValues() {
+        mainField.setText("");
+        doubleEqualFlag = 0;
+        xValue = 0;
+        yValue = 0;
+        operator = "";
     }
 
     private boolean checkDoubleEqualFlag() {
